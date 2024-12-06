@@ -25,22 +25,19 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 90%;
-  max-width: 100rem;
-  height: auto;
-  max-height: 90vh;
+  width: 100rem;
+  height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
 }
 
 .player {
-  flex: 1;
-  padding: 5%;
+  flex: 50%;
+  padding: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +46,7 @@ main {
 
 .name {
   position: relative;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -58,7 +55,7 @@ main {
 }
 
 .score {
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: 8rem;
   font-weight: 300;
   color: #c7365f;
   margin-bottom: auto;
@@ -108,8 +105,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: auto;
-  bottom: 10%;
+  top: 60%; /* Adjusted for better spacing */
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 1.5rem; /* Spacing between buttons */
@@ -118,7 +114,8 @@ main {
 /* New Game button at the top center */
 .btn--new {
   position: absolute;
-  top: 5%;
+  bottom: 33rem;
+  /* top: 20rem; */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -157,11 +154,9 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 25%; /* Adjusted to move dice higher */
   transform: translateX(-50%);
-  height: 10%;
-  max-width: 15%;
-  max-height: 15%;
+  height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -181,29 +176,12 @@ main {
 
 .modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 60%; /* Center vertically */
+  left: 60%; /* Center horizontally */
+  transform: translate(-60%, -60%); /* Adjust positioning from center */
   background-color: white;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 1000;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    width: 95%;
-    height: auto;
-  }
-
-  .player {
-    padding: 3rem;
-  }
-
-  .buttons-container {
-    bottom: 5%;
-  }
 }
